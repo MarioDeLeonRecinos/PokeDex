@@ -148,13 +148,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onPostExecute(pokemonInfo: String) {
-            /*var pokemons: JSONArray = JSONObject(pokemonInfo).getJSONArray("results")
-            var pokemon: MutableList<Pokemon> = MutableList(100) { i ->
-                Pokemon(i.toString(), JSONObject(pokemons.getString(i)).getString("name"), JSONObject(pokemons.getString(i)).getString("url"))
-            }*/
-
             asyncResponse!!.proccesFinish(pokemonInfo)
-
         }
     }
 }
